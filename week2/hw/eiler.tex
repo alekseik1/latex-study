@@ -46,6 +46,7 @@
 \usepackage{longtable}  % Длинные таблицы
 \usepackage{multirow} % Слияние строк в таблице
 \usepackage{titlesec}
+\usepackage[left=1.27cm,right=1.27cm,top=2cm,bottom=2cm]{geometry}
 
 
 %%% Заголовок
@@ -56,11 +57,91 @@
 \begin{document}
 	\maketitle
 	\stepcounter{section}
-	\begin{wrapfigure}{c}{0.5\textwidth}
+	\section{}
+	Пусть фиг. \ref{fig21} представляет собой положения Солнца $S$, Земли $T$ и Луны $L$, и пусть $\Theta$ есть центр тяжести Земли и Луны. Делаем следующие обозначения:
+	
+	\begin{table}[h]
+		\begin{center}
+			\begin{tabular}{rlcc}
+				Масса & Солнца & \dots & $S$ \\
+				>> & Земли & \dots & $T$ \\
+				>> & Луны & \dots & $L$
+			\end{tabular}
+		\end{center}
+	\end{table}
+
+	Расстояние:
+	\[
+	S \Theta = \rho\,;~ ST = \rho_1\,;~ SL = \rho_2\,;~ TL = r
+	\]
+	тогда будет:
+	\begin{equation}
+		\begin{aligned}
+			T \Theta = r_1 = \frac{L}{T+L} r \\
+			L \Theta = r_2 = \frac{T}{T+L} r
+		\end{aligned}
+	\end{equation}
+	Составим теперь выражения ускорений, которые эти тела сообщат друг другу.
+	\begin{figure}[!h]
+		\centering
 		\label{fig21}
 		\caption{}
-		\includegraphics{fig21}
-	\end{wrapfigure}
-	\section{} Пусть фиг. \ref{fig21} представляет собой положения Солнца $S$, Земли $T$ и Луны $L$, и пусть $\Theta$ есть центр тяжести Земли и Луны. Делаем следующие обозначения:
+		\includegraphics[width=0.45\linewidth]{fig21}
+	\end{figure}
+
+	%\newpage	% Если что, верните его!
+	Солнце $S$ сообщает ускорения:
+	\begin{table}[!h]
+		\centering
+		\begin{tabular}{rcccc}
+			Земле: & $f \cdot \cfrac{S}{\rho_1^2}$ & по & направлению & $TS$ \\[5mm]
+			Луне: & $f \cdot \cfrac{S}{\rho_2^2}$ & >> & >>  & $LS$
+		\end{tabular}
+	\end{table}
+
+	\noindent  чего точка $\Theta$ имеет ускорения:
+	\newpage
+	\begin{table}[!h]
+		\centering
+		\begin{tabular}{rcccc}
+			$\cfrac{T}{T+L} \cdot f \cdot \cfrac{S}{\rho_1^2}$ & по & направлению, & параллельному & $TS$ \\[5mm]
+			$\cfrac{T}{T+L} \cdot f \cdot \cfrac{S}{\rho_2^2}$ & >> & >> & >> & $LS$
+		\end{tabular}
+	\end{table}
+
+	Ускорения Солнца, происходящее от притяжения Земли и Луны, соответственно, суть:
+	\begin{table}[!h]
+		\centering
+		\begin{tabular}{cccc}
+			$f \cdot \cfrac{T}{\rho_1^2}$ & по & направлению & $ST$ \\[5mm]
+			$f \cdot \cfrac{T}{\rho_2^2}$ & >> & >> & $SL$ \\			
+		\end{tabular}
+	\end{table}
+	
+	\noindent поэтому ускорения точки $\Theta$ относительно точки $S$ будет:
+	\begin{table}[!h]
+		\centering
+		\begin{tabular}{ccccc}
+			$w_1 = f \cdot \cfrac{(S + T + L)}{T + L} \cdot \cfrac{T}{\rho_1^2}$ & по & направлению & параллельно & $TS$ \\[5mm]
+			$w_2 = f \cdot \cfrac{S+T+L}{T+L} \cdot \cfrac{L}{\rho_2^2}$ & >> & >>		   & >>			 & $LS$
+		\end{tabular}
+	\end{table}
+	
+	\noindent Разлагая эти ускорения, соответственно, по направлениям $\Theta S$ и $\Theta L$, получим, как легко видеть из подобия показанных на фиг. \ref{fig22} и \ref{fig23} треугольников:
+	\begin{figure}[h]
+		\centering
+		\label{fig22}
+		\caption{}
+		\includegraphics[width=\linewidth]{fig22}
+	\end{figure}
+	\newpage
+	получим для ускорений точки $\Theta$ слагающие:
+
+	\begin{figure}[h]
+		\centering
+		\label{fig23}
+		\caption{}
+		\includegraphics[width=0.4\linewidth]{fig23}
+	\end{figure}
 	
 \end{document}
