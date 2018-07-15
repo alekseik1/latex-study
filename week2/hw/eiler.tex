@@ -76,6 +76,7 @@
 	\]
 	тогда будет:
 	\begin{equation}
+	\label{eq1}
 		\begin{aligned}
 			T \Theta = r_1 = \frac{L}{T+L} r \\
 			L \Theta = r_2 = \frac{T}{T+L} r
@@ -128,20 +129,93 @@
 	\end{table}
 	
 	\noindent Разлагая эти ускорения, соответственно, по направлениям $\Theta S$ и $\Theta L$, получим, как легко видеть из подобия показанных на фиг. \ref{fig22} и \ref{fig23} треугольников:
-	\begin{figure}[h]
+	\begin{table}[!h]
+		\centering
+		\begin{tabular}{cccc}
+			$w_1 ' = w_1 \cdot \cfrac{\rho}{\rho_1}$ & по & направлению & $\Theta$ S \\[5mm]
+			$w_1 '' = w_1 \cdot \cfrac{r_1}{\rho_1}$ & >> & >> & $\Theta L$ \\[5mm]
+			$w_2 ' = w_2 \cdot \cfrac{\rho}{\rho_2}$ & >> & >> & $\Theta S$ \\[5mm]
+			$w_2 '' = w_2 \cdot \cfrac{r_2}{\rho_2}$ & >> & >> & $L \Theta$
+		\end{tabular}
+	\end{table}
+	\begin{figure}[!h]
 		\centering
 		\label{fig22}
 		\caption{}
-		\includegraphics[width=\linewidth]{fig22}
+		\includegraphics[width=0.6\linewidth]{fig22}
 	\end{figure}
-	\newpage
-	получим для ускорений точки $\Theta$ слагающие:
 
-	\begin{figure}[h]
+	получим для ускорений точки $\Theta$ слагающие:
+	\begin{table}[!h]
+		\centering
+		\begin{tabular}{ccc}
+			$W_1 = w_1' + w_2' = f \cdot \cfrac{S + T + L}{T + L} \cdot \left[ T \cdot \cfrac{\rho}{\rho_1^3} + L \cdot \cfrac{\rho}{\rho_2^3} \right]$ & по & $\Theta S$ \\[5mm]
+			$W_2 = w_1'' - w_2'' = f \cdot \cfrac{S + T + L}{T + L} \cdot \left[ T \cdot \cfrac{r_1}{\rho_1^3} - L \cdot \cfrac{r_2}{\rho_2^3} \right]$ & по & $\Theta L$ \\
+		\end{tabular}
+	\end{table}
+	\begin{figure}[!h]
 		\centering
 		\label{fig23}
 		\caption{}
-		\includegraphics[width=0.4\linewidth]{fig23}
+		\includegraphics[width=0.6\linewidth]{fig23}
 	\end{figure}
+
+	\newpage
+	Заменив $r_1$ и $r_2$ их выражениями (\ref{eq1}), имеем:
 	
+	\begin{align*}
+	& W_1 = f \cdot \cfrac{S + T + L}{T + L} \cdot \rho \cdot \left[ \dfrac{T}{\rho_1^3} + \dfrac{L}{\rho_2^3}\right] \text{по направлению } \Theta S \\
+	& W_2 = f \cdot \cfrac{S + T + L}{\left(T + L\right)^2} \cdot T \cdot L \cdot r \left[ \dfrac{1}{\rho_1^3} - \dfrac{1}{\rho_2^3}\right] \text{по направлению } \Theta L
+	\end{align*}
+	Но
+	
+	\begin{align*}
+		& \rho_1^2 = \rho^2 + 2 \rho \cdot \cfrac{L}{T+L} \cdot r \cos \omega + \left(\dfrac{L}{T+L} \cdot r\right)^2 \\
+		& \rho_2^2 = \rho^2 - 2 \rho \cdot \cfrac{L}{T+L} \cdot r \cos \omega + \left(\dfrac{L}{T+L} \cdot r\right)^2
+	\end{align*}
+	следовательно:
+	
+	\begin{align*}
+	\dfrac{1}{\rho_1^3} = \dfrac{1}{\rho_3} \left[1 + 3\,\dfrac{L}{T+L} \cos \omega + \left( \dfrac{L}{T+L} r\right)^2 \left(-\frac{3}{2} + \cfrac{15}{2} \cos^2 \omega\right) + \dots\right] \\
+	\dfrac{1}{\rho_2^3} = \dfrac{1}{\rho_3} \left[1 + 3\,\dfrac{T}{T+L} \cos \omega + \left( \dfrac{T}{T+L} r\right)^2 \left(-\frac{3}{2} + \cfrac{15}{2} \cos^2 \omega\right) + \dots\right]
+	\end{align*}
+	Подставляя эти выражения, имеем:
+	
+	\begin{align*}
+	& W_1 = f \cdot \dfrac{S + T + L}{\rho^2} \left[1 + \dfrac{T \cdot L}{\left(T + L\right)^2} \cdot \dfrac{r^2}{\rho^2} \left( - \frac{3}{2} + \frac{15}{2} \cos^2 \omega \right) + \dots\right] \\
+	& W_2 = f \cdot \dfrac{S + T + L}{\rho^2} \left[-3 \cdot \dfrac{T \cdot L}{\left(T + L\right)^2} \cdot \dfrac{r^2}{\rho^2} \cos \omega + \dots\right]
+	\end{align*}
+	Но отношения
+	
+	\begin{alignat*}{3}
+	\frac{L}{T+L} \approx \frac{1}{80}; \quad &
+	\frac{r}{\rho} \approx \frac{1}{400}; \quad &
+	\left(\frac{r}{\rho}\right)^2 = \frac{1}{160000}
+	\end{alignat*}
+	поэтому будет
+	
+	\[
+		\frac{T \cdot L}{\left(T + L\right)^2} \cdot \frac{r^2}{\rho^2} \approx \frac{1}{12800000}
+	\]
+	и члены, содержащие этот множитель, могут быть отброшены, так что будет:
+	
+	\begin{align*}
+	& W_1 = f \cdot \frac{S+T+L}{\rho^2} \text{ по направлению } \Theta S \\
+	& W_2 = 0 \text{ по направлению } \Theta L
+	\end{align*}
+	
+	Отсюда следует, что точка $\Theta$ движется вокруг Солнца по эллиптической орбите по законам Кеплера.
+	
+	Рассмотрим теперь ускорение Луны по отношению к Земле, для чего к ускорениям, сообщаемым Луне Солнцем и Землею, надо присовокупить ускорение, равное и противоположное ускорению Земли, происходящему от действия Солнца и Луны. Поступив подобно предыдущему, получим:
+	
+	\[
+	f \cdot \frac{T + L}{r^2} + f \cdot S\left[\frac{r_2}{\rho_2^3} + \frac{r_1}{\rho_1^3}\right] \text{ по направлению } L\Theta \\
+	\]
+	\[
+	f \cdot S \cdot \rho \left[\frac{1}{\rho_2^3} - \frac{1}{\rho_1^3}\right] \text{ параллельно } \Theta S
+	\]
+	положим:
+	\[
+		T + L = \mu; \quad S = M
+	\]	
 \end{document}
