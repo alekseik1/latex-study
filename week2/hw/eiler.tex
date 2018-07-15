@@ -57,7 +57,12 @@
 \begin{document}
 	\maketitle
 	\stepcounter{section}
-	\section{}
+	\titleformat{\paragraph}[runin]
+	{\normalfont\bfseries}
+	{}
+	{0pt}
+	{\S\,}
+	\paragraph{2} 
 	Пусть фиг. \ref{fig21} представляет собой положения Солнца $S$, Земли $T$ и Луны $L$, и пусть $\Theta$ есть центр тяжести Земли и Луны. Делаем следующие обозначения:
 	
 	\begin{table}[h]
@@ -217,5 +222,8 @@
 	положим:
 	\[
 		T + L = \mu; \quad S = M
-	\]	
+	\]
+	
+	\listoftables
+	\listoffigures	% merde
 \end{document}
